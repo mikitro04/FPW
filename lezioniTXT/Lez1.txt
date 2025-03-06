@@ -27,96 +27,99 @@ Introduzione:
 --------------------------------------------------------------------------------
 05/03/2025
 
-App web statica: app web in cui crei pagine, le metti in un FS del Server; accedi alla pagina web e il server ti mette a disposizione quei file.
+    App web statica: app web in cui crei pagine, le metti in un FS del Server; accedi alla pagina web e il server ti mette a disposizione quei file.
 
-App web dinamica: sul FS rimane uguale, chiedo al server di darmi l'accesso, ma quelle pagine non sono file statici, ma sono una risorsa differente confezionata al monmento della richiesta. La pagina web viene confezionata AL MOMENTO.
+    App web dinamica: sul FS rimane uguale, chiedo al server di darmi l'accesso, ma quelle pagine non sono file statici, ma sono una risorsa differente confezionata al monmento della richiesta. La pagina web viene confezionata AL MOMENTO.
 
-e.g.
-Statica: siti vetrina. Qualsiasi monento accedi la pagina web rimane uguale
-Dinamica: Facebook. Due perosne diverse che accedono vedono due pagine in base alle proprie caratteristiche
+    e.g.
+    Statica: siti vetrina. Qualsiasi monento accedi la pagina web rimane uguale
+    Dinamica: Facebook. Due perosne diverse che accedono vedono due pagine in base alle proprie caratteristiche
 
-SUDDIVISIONE TRA CLIENT E SERVER
+    SUDDIVISIONE TRA CLIENT E SERVER
 
-SERVER: Macchina che sta da qualche parte fisicamente che offre dei servizi: le pagine web
-CLIENT: persone che accedono ai servizi del server (Browser web, applicazioni del telefono, ecc..)
+    SERVER: Macchina che sta da qualche parte fisicamente che offre dei servizi: le pagine web
+    CLIENT: persone che accedono ai servizi del server (Browser web, applicazioni del telefono, ecc..)
 
-Struttura che useremo noi: client e server sulla stessa macchina
+    Struttura che useremo noi: client e server sulla stessa macchina
 
-Attore principale: Browser. Ci permette di interrogare il server e farci mandare delle risorse. è in grado di prendere quelle risorse e renderizzarle
+    Attore principale: Browser. Ci permette di interrogare il server e farci mandare delle risorse. è in grado di prendere quelle risorse e renderizzarle
 
-Il server ci manda qualcosa di testuale (codice)
+    Il server ci manda qualcosa di testuale (codice)
 
-In passato non tutti i Browser erano uniformati nello stesso standard (e.g. Internet Explorer)
+    In passato non tutti i Browser erano uniformati nello stesso standard (e.g. Internet Explorer)
 
-Parlano tra di loro grazie al protocollo HTTP. Versione più usata HTTP/1.1 del '99
-Le altre versioni sucessive sono retrocompatibili con questa
+    Parlano tra di loro grazie al protocollo HTTP. Versione più usata HTTP/1.1 del '99
+    Le altre versioni sucessive sono retrocompatibili con questa
 
-HTTP = Hyper Text Trasfert Protocol 
+    HTTP = Hyper Text Trasfert Protocol 
 
-Come funziona HTTP:
-    Protocollo a domanda-risposta: ad ogni domanda del client, il server da una risposta (Positiva o negativa)
+    Come funziona HTTP:
+        Protocollo a domanda-risposta: ad ogni domanda del client, il server da una risposta (Positiva o negativa)
 
-    Protocollo senza stato, nel senso che ogni comunicazione non è legata con le altre
+        Protocollo senza stato, nel senso che ogni comunicazione non è legata con le altre
 
-    Le richiesye viaggiano sul protocollo di trasporto TCP che garantisce la consegna della domanda e della risposta
+        Le richiesye viaggiano sul protocollo di trasporto TCP che garantisce la consegna della domanda e della risposta
 
-    Rispetto alla prima versione, la versione HTTP/1.1 ha permesso il traffico di diverse richieste contemporaneamente
+        Rispetto alla prima versione, la versione HTTP/1.1 ha permesso il traffico di diverse richieste contemporaneamente
 
-La rchiesta del client viene passata al DNS che trasforma il link e.g. Facebook.com nell'indirizzo IP che verrà poi mandato al server
-La richiesta dal DNS viene rimbalzata al client che avendo l'indirizzo IP della pagina richiesta lo manda al server che accederà poi al File System da cui poi prenderà la pagina richiesta
-Una volta terminato chiudo il canale di comunicazione
+    La rchiesta del client viene passata al DNS che trasforma il link e.g. Facebook.com nell'indirizzo IP che verrà poi mandato al server
+    La richiesta dal DNS viene rimbalzata al client che avendo l'indirizzo IP della pagina richiesta lo manda al server che accederà poi al File System da cui poi prenderà la pagina richiesta
+    Una volta terminato chiudo il canale di comunicazione
 
-Richiesta HTTP:
-    - Risorsa richiesta
-    - Metodo: quale azione viene richiesta dal server   
-        GET: informazioni della query visualizzate in chiaro 
-        POST: informazioni nascoste nel campo dell'URL
-        HEAD: come GET
-    - Header:
-        - Accept: tipologie di contenuto accettate
-        - Connection: mantenimento della connesione TCP
-        - Accept-Lenguage
-        - ecc..
-    - Protocollo
+    Richiesta HTTP:
+        - Risorsa richiesta
+        - Metodo: quale azione viene richiesta dal server   
+            GET: informazioni della query visualizzate in chiaro 
+            POST: informazioni nascoste nel campo dell'URL
+            HEAD: come GET
+        - Header:
+            - Accept: tipologie di contenuto accettate
+            - Connection: mantenimento della connesione TCP
+            - Accept-Lenguage
+            - ecc..
+        - Protocollo
 
-Risposta HTTP:
-    - Protocollo
-    - Codice di stato
-        - tra 200 e 299 successo
-            - e.g. 200: OK 
-        - tra 300 e 399 reindirizzamento verso un altro server
-            - e.g. 301: Pagina spostata
-        - tra 400 e 499 errore client
-            - e.g. 400 Bad Request
-            - e.g. 403 Forbidden
-            - e.g. 404 File not found
-        - tra 500 e 599 errore server
-            - e.g. 500 Server Error
-    - Frase di stato
-    - Header:
-        - Allow: Metodi HTTP accettati dal server
-        - Content lenght: dimensione in bytes
-        - Content type
-        - Date
-        - Expires
-        - Location
+    Risposta HTTP:
+        - Protocollo
+        - Codice di stato
+            - tra 200 e 299 successo
+                - e.g. 200: OK 
+            - tra 300 e 399 reindirizzamento verso un altro server
+                - e.g. 301: Pagina spostata
+            - tra 400 e 499 errore client
+                - e.g. 400 Bad Request
+                - e.g. 403 Forbidden
+                - e.g. 404 File not found
+            - tra 500 e 599 errore server
+                - e.g. 500 Server Error
+        - Frase di stato
+        - Header:
+            - Allow: Metodi HTTP accettati dal server
+            - Content lenght: dimensione in bytes
+            - Content type
+            - Date
+            - Expires
+            - Location
 
-Cookies:
-    Il browser invia richieste al server, il server risponde e da anche un cookies, ovvero un identificatore che servirà al prossimo accesso al server.
+    Cookies:
+        Il browser invia richieste al server, il server risponde e da anche un cookies, ovvero un identificatore che servirà al prossimo accesso al server.
 
-HTTP è un protocollo non cifrato
+    HTTP è un protocollo non cifrato
 
-HTTPS invece è criptato, permette di avere una comunicazione sicura ma più lenta. I pacchetti sono gli stessi
+    HTTPS invece è criptato, permette di avere una comunicazione sicura ma più lenta. I pacchetti sono gli stessi
 
-URL: Uniform Resource Locate:
-    - Protocollo (e.g. HTTP)
-    - ://
-    - nome host
-    - :
-    - porta
-    - /
-    - percorso
-    - ?
-    - query string
-    - #
-    - fragment
+    URL: Uniform Resource Locate:
+        - Protocollo (e.g. HTTP)
+        - ://
+        - nome host
+        - :
+        - porta
+        - /
+        - percorso
+        - ?
+        - query string
+        - #
+        - fragment
+
+--------------------------------------------------------------------------------
+
