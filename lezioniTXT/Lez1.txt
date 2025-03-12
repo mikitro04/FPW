@@ -15,7 +15,7 @@ Introduzione:
     Metà del voto finale è Teoria, l'altra metà pratica (progetto)
 
     Due parziali:
-        - 16 Aprile (Primo Parziale)
+        - 23 Aprile (Primo Parziale)
         - 28 Maggio (2° Parziale e Primo appello di Teoria)
 
     Punti Bonus:
@@ -122,4 +122,90 @@ Introduzione:
         - fragment
 
 --------------------------------------------------------------------------------
+06/03/2025
+
+	HTML definisce la struttura ma non il layout
+
+	HTML = Hyper Text Markup Lenguage
+	Linguaggio di Markup NON di programmazione
+
+	HTML tag: keyword racchiusa tra < ... >
+	    e.g. <img ..>
+
+	    Il tag si chiude mettendo all'inizio della parentesi angolare il / -> </ ... >
+	    e.g. <h1> Titolo </h1>
+	    Tra le parentesi angolare è presente un elemento
+
+	    I tag "self closing" son odei tag senza bisogno di essere chiusi (e.g. <br/>)
+
+	    Gli attributi sono all'interno del tag
+	    e.g. <a href = "https://..."> Esempio di link </a>   =>  questo è un esempio di un link
+	    "a" sta per "ancora"
+
+	    Attributi classici:
+		+ class: uno o più classi associate ad un elemento
+		+ id: identificatore univoco per un elemento
+		+ name: un nome per l'elemento
+		+ style: uno stile CSS specificato come attributo
+		+ title: informazione supplemenrare su un elemento
+
+	Versione standard HTML 5.0 (non ultima versione)
+	Attraverso https://www.validator.w3.org si può verificare se ciò che abbiamo scritto rispetti gli standard 
+
+	Struttura classica di una pagina HTML:
+	    <!DOCTYPE html>
+		<html>
+		    <head>          <!--ciò che non viene visualizzato nella pagina-->
+		        ...
+		    </head>
+
+		    <body>          <!--ciò che viene visualizzato nella pagina-->
+		        ...
+		    </body>
+		</html>
+
+	La struttura di una pagina web è un albero
+
+	L'head contiene le informazioni generali della pagina:
+	    + Titolo
+	    + dove si trova il foglio CSS
+	    + come includere lo script 
+	    + Fornisce meta-informazioni
+
+	    Risorse esterne nell'head tramite il tag link (i file CSS)
+
+	    "style" definisce le informazioni riguardo la presentazione del documento (anche se possono stare nell'HTML la definiremo su file esterni)
+
+	    "meta" definisce informazioni sul documento HTML (keywords, descriptions, author, refresh (rate), ecc..)
+	    <meta charset = "utf-8" />
+
+	Il body è il corpo della pagina web:
+	    Titoli visivi:
+		<hn> con n che va da 1 a 6 (1 il più importante, 6 meno importante)
+		ci deve essere SOLO un <h1> e quanti <h2..6> vogliamo
+
+	    Paragrafi con tag <p> e </p>
+
+	    <hr> crea una linea orizzontale
+
+	    <br> o <br/> va a capo (in C \n)
+
+	    Formati del testo:
+		+ Grassetto
+		    <strong> e <b>
+		    strong è un tag semantico e indica un testo più importante
+		    b rende il testo in grassetto
+		    fanno la stessa cosa ma la semantica è diversa
+		    PER LE PERSONE RINCOGLIONITE SI USA STRONG
+		+ Corsivo
+		    tag <i> (italic) e <em> (significato semantico)
+		+ Sottolineato: <ins>
+		+ Codice: tag <code>
+		+ Sottolineato: <sub>
+		+ Evidenziato: <mark>
+		+ Barrato: <del>
+
+--------------------------------------------------------------------------------
+12/03/2025
+
 
