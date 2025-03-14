@@ -206,6 +206,50 @@ Introduzione:
 		+ Barrato: <del>
 
 --------------------------------------------------------------------------------
-12/03/2025
+13/03/2025
 
+Web Application:
+    è divisa in 3 parti fondamentali:
+        + CLIENT:
+            - è la parte con cui l'utente interagisce direttamente tramite un'interfaccia
+            - è responsabile di inviare richieste per ottenere dati
+            - oltre essere sviluppato su HTML e CSS, vengono anche usati freamework di JavaScript come Vue.js, React e Angular
+        + SERVER:
+            - è il computer remoto che accede al database per recuperare o memorizzare i dati
+            - coordina le attività per il client
+            - per sviluppare e gestire un server vengono utilizzate tecnologie come Note.js, Java, o PHP
+        + DATABASE:
+            - è un sistema di archiviazione dei dati, ai quali il client può farci un qualsiasi tipo di operazione
+            -  MySQL e MongoDB sono tra i database più popolari usati con le applicazioni web
+    Noi useremo HTML, CSS, JavaScript e SQL
 
+Vue.js:
+    + freamework di JavaScript basato su HTML e CSS
+    + permette di semplificare lo sviluppo consentendo allo sviluppatore di concentrarsi sulla logica dell'applicazione e sulla gestione dello stato attraverso la scrittura del codice JavaScript
+     mentre Vue.js pensa all'aggiornamento dell'interfaccia utente
+    + l'interfaccia utente viene suddivisa in componenti riutilizzabili e modulari, quindi ogni componente può avere il suo stato, comportamento e template associato
+    
+    dopo un murigo l'ho installato
+
+    Passi per lavorare con Vue.js:
+        1. Avere Node.js e npm installato
+        2. Assicurarsi di avere le versioni giuste, sincronizzate che possano lavorare tra di loro (Chiedi a ChatGPT)
+        3. Creare il progetto usando il comando "npm create vue@latest"
+            3.1. una volta eseguito il comando ci appariranno delle funzionalità opzionali come il nome e se vuoi aggiungere il TypeScript
+            3.2. entra nella direcroty del progetto (Da terminale per ovviamente) usa il comando "cd <nome-progetto>"
+            3.3. esegui il comando "npm install"
+        4. per lavorare sull'applicazione e testarla dal vivo esegui "npm run dev"
+        5. quando si è pronti a inviare l'applicazione in produzione esegui "npm run build"
+    - (useless) Nella cartella ./dist del progetto finiscono i risultati delle operazioni di ottimizzazione del progetto creato
+    - File del progetto rilevanti:
+        + package.json: contiene informazioni sul progetto come nome, versione, scripts e dipendenze
+        + index.html: punto di ingresso HTML
+        + src: codice sorgente dell'applicazione (directory)
+            * assets: risorse statiche
+            * components
+            * router
+            * stores
+            * views
+            * App.vue: componente principale Vue che contiene l'intera applicazione
+            * main.js: punto di ingresso del codice JavaScript dell'intera applicazione
+        + vite.config.js: serve per collegare back-end e front-end
