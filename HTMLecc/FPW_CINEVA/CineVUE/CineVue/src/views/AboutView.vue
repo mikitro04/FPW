@@ -1,13 +1,8 @@
 <script setup>
     import { RouterLink } from 'vue-router';
-    import Navbar from '@/components/Navbar.vue';
-    import Header from '@/components/Header.vue';
 </script>
 
 <template>
-  
-  <Header></Header>
-  <Navbar></Navbar>
   
   <h1>Cos'è Cineva?</h1>
   

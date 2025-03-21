@@ -16,12 +16,12 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/AboutView.vue'),      //import del componente tramite arrow function
     },
     {
       path: '/contact',
       name: 'contact',
-      component: ContactsView,
+      component: ContactsView,        //import del componente tramite import
     },
     {
       path: '/news',
