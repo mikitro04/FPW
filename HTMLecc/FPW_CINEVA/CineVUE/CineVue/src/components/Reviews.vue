@@ -24,8 +24,20 @@
 </script>
 
 <template>
-    <h4>Recensione di: <b>{{ name }}</b> - {{ titolo }}</h4>
-    <p>{{ scritta }}</p>
-    <p>Voto: <b>{{ calcolaVoto }}/10</b></p>
-    <p>\____________________________________________________________________________________________/</p>
+    <div class="review">
+        <h4>Recensione di: <b>{{ name }}</b> - {{ titolo }}</h4>
+        <p>{{ scritta }}</p>
+        <p>Voto: <b>{{ calcolaVoto }}/10</b></p>
+    </div>
 </template>
+
+<style>
+    .review {
+        padding: 15px;
+
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    }
+</style>
