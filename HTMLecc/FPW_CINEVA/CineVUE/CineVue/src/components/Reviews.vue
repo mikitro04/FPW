@@ -24,7 +24,7 @@
 </script>
 
 <template>
-    <div class="review">
+    <div class="review col-6">
         <h4>Recensione di: <b>{{ name }}</b> - {{ titolo }}</h4>
         <p>{{ scritta }}</p>
         <p>Voto: <b>{{ calcolaVoto }}/10</b></p>

@@ -14,25 +14,8 @@
             <li><RouterLink to="/contact">Contatti</RouterLink></li>
             <li><RouterLink to="/news">News</RouterLink></li>
             <li><RouterLink to="/who">Chi siamo?</RouterLink></li>
+            <li><RouterLink to="/newReview">New Review</RouterLink></li>
+            <li><RouterLink to="/login">Login</RouterLink></li>
         </ul>
     </nav>
 </template>
-
-<style>
-    nav li{
-        list-style-type: none;
-
-        display: inline-block;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        border-left: 2px solid var(--black);
-    }
-
-    nav li:first-child{
-        border-left: none;
-    }
-</style>

@@ -1,5 +1,3 @@
-
-
 <template>
     <header>
         <a href="/">

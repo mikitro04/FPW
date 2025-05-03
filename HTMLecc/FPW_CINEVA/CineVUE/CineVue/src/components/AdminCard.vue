@@ -10,7 +10,13 @@
 </script>
 
 <template>
-  <img :src="imageSrc" alt="immagine Admin" width="600"/>
-  <p><b>{{ name }}</b>: {{ description }}</p>
-  <p>\___________________________________________________/</p>
+  <div class="col-6">
+    <img :src="imageSrc" alt="immagine Admin" width="600"/>
+  </div>
+  <div class="col-6">
+    <p><b>{{ name }}</b>: {{ description }}</p>
+  </div>
+  <div class="col-12">
+    <hr>
+  </div>
 </template>

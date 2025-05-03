@@ -14,6 +14,7 @@
       <ul id="indice">
         <li><a href="#info">Informazioni sul sito</a></li>
         <li><a href="#target">A chi è rivolto il sito</a></li>
+        <li><a href="#cost">Quanto costa?</a></li>
       </ul>
     </div>
     
@@ -26,6 +27,12 @@
 
       <h3 id="target">A chi è rivolto il sito?</h3>
       <p>Descrizione a chi è rivolto il sito</p>
+      <a href="#titoloIndice">Torna su</a>
+
+      <hr>
+
+      <h3 id="cost">Quanto costa?</h3>
+      <p>Il sito è completamente gratuito</p>
       <a href="#titoloIndice">Torna su</a>
     </div>
 

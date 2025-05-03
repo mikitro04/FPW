@@ -13,10 +13,19 @@
   <Header></Header>
   <Navbar></Navbar>
   
-  <!--Corpo-->
-  <RouterView />
+  <div class="cols">
+    <!--Corpo-->
+    <RouterView />
+
+    <!--Pedice-->
+    <Footer></Footer>
+  </div>
   
-  <!--Pedice-->
-  <Footer></Footer>
 
 </template>
+
+<style>
+  .cols{
+    overflow: hidden;
+  }
+</style>
