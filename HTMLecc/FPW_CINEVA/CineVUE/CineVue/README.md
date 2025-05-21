@@ -1,29 +1,21 @@
 # CineVue
 
-This template should help get you started developing with Vue 3 in Vite.
+Cosa fare per avviare tutto
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
+## Compilare il progetto
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Avviare il server
 
 ```sh
-npm run build
+cd HTMLecc/FPW_CINEVA/CineVUE/CineVue/Server/
+npm run start
 ```
+
+### Altre cose da fare
+
+1. Avviare Postman
+2. TBD..
