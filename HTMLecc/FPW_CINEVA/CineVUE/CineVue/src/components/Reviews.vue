@@ -32,6 +32,7 @@
 </template>
 
 <style>
+
     .review {
         padding: 15px;
 
