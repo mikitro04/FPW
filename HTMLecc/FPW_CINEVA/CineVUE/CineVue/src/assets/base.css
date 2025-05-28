@@ -53,6 +53,11 @@ body{
 }
 
 @media (min-width: 768px) {
+
+    nav{
+        position: sticky;
+    }
+
     nav li{
         list-style-type: none;
 
